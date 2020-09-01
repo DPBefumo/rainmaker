@@ -22,14 +22,14 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('accounts/', include('registration.backends.simple.urls')),
-    path('', core_views.home_page, name="home"),
+    path('', core_views.home_page, name='home'),
+    path('about/', core_views.about_detail, name='about_detail'),
+    path('contact/', core_views.contact_detail, name='contact_detail'),
+    path('service/', core_views.service_detail, name='service_detail'),
 ]
 
 if settings.DEBUG:
     import debug_toolbar
     urlpatterns = [
         path('__debug__/', include(debug_toolbar.urls)),
-
-        # For django versions before 2.0:
-        # url(r'^__debug__/', include(debug_toolbar.urls)),
     ] + urlpatterns
