@@ -4,9 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Material Icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- Local CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}"/>
     <title>Rain Maker Irrigation</title>
 </head>
 <body>
+<header>
+    <nav>
+        <a href='/' class=''><i class="material-icons">home</i></a>
+        <h2>Rain Maker Irrigation</h2>
+        <a href="{% url 'auth_login' %}" class=''><i class="material-icons">login</i></a>
+    </nav>
+    <nav>
+        
+    </nav>
+</header>
 {% block content %}
 {% endblock %}
 </body>
